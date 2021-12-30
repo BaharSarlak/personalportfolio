@@ -24,85 +24,88 @@ class ContactForm extends Component {
     }
 
     handleChange= (event) => {
-        let target=event.target.name
-        let value=event.target.value
+        const  target=event.target.name;
+        const  value=event.target.value;
+
         this.setState({
             fields:{...this.state.fields, [target]: value}
+        },()=> { 
+            console.log('fields state after the call to handlechange method: '+JSON.stringify(this.state.fields));
         })
-        
-        console.log(this.state.fields)
-    }
-
-    handleBlur=(field) => {
-        this.setState({
-            touched : {...this.state.touched, [field]:true}
-        })
-        console.log(this.state.touched)
-        
-    }
+    };
 
     handleErrors= () => {
-        let fields=this.state.fields
-        let touched=this.state.touched
-        let errors=this.state.errors
+        const {fields,touched,errors}=this.state;
+        const emailRegex=/^\w+@\w+\.[a-zA-Z]{2,4}$/;
+
+        // *** making sure the touched object is changed before changing errors object:
+        console.log('touched state after the call to handleErrors method: '+JSON.stringify(this.state.touched));
+        //  
 
         if(touched.name) {
             if(fields.name.length<2 || fields.name.length>20) {
                 this.setState({
                     errors: {...errors, name:'Please enter a valid name'}
+                }, ()=> {
+                    console.log('name field:::errors object immediately after state update:'+JSON.stringify(this.state.errors));
                 })
             } else {
                 this.setState({errors:{...errors, name:''}})
             }
-        }
+        };
 
-        if(touched.message) {
-            if(fields.message.length<6 || fields.message.length>400) {
-                this.setState({
-                    errors: {...errors, message:'Cannot be less than 6 or more than 400 characters'}
-                })
-            }
-            else {
-                this.setState({errors:{...errors, message:''}})
-            }
-        }
-
-        const emailRegex=/^\w+@\w+\.[a-zA-Z]{2,4}$/
         if(touched.email) {
                 if(!(fields.email.match(emailRegex)) || fields.email.length>50) {
                 this.setState({
                     errors: {...errors, email:'Invalid Email'}
+                }, ()=> {
+                    console.log('email field:::errors object immediately after state update:'+JSON.stringify(this.state.errors));
                 })
             }
             else {
                 this.setState({errors:{...errors, email:''}})
             }
-        }
+        };
 
-        console.log(this.state.errors)
+        if(touched.message) {
+            if(fields.message.length<6 || fields.message.length>400) {
+                this.setState({
+                    errors: {...errors, message:'Cannot be less than 6 or more than 400 characters'}
+                }, ()=> {
+                    console.log('message field:::errors object immediately after state update:'+JSON.stringify(this.state.errors));
+                })
+            }
+            else {
+                this.setState({errors:{...errors, message:''}})
+            }
+        };
 
-    }
+        console.log(this.state.errors);
+
+    };
 
     checkField =(field) => () => {
-        this.handleBlur(field);
-        this.handleErrors()
-    }
+        this.setState({
+            touched : {...this.state.touched, [field]:true}
+        },()=> { 
+            console.log('touched state before calling handleErrors method: '+JSON.stringify(this.state.touched));
+            this.handleErrors();
+        })
+    };
 
     handleSubmit= (event) => {
-        event.preventDefault()
+        event.preventDefault();
 
         if (!this.state.fields.name || !this.state.fields.email || !this.state.fields.message) {
             this.setState({
                 errors: {...this.state.errors, submit:'There are still empty fields'}
             })
         } else {
-        alert('thanks for your message')
+        alert('thanks for your message');
         }
-    }
+    };
 
-    render() {
-        
-                
+    render() {    
         return(
             <form onSubmit={this.handleSubmit}>
                 <label htmlFor="name">Your Name</label>
@@ -132,7 +135,6 @@ class ContactForm extends Component {
             </form>
         )
     }
-
 }
 
-export default ContactForm
+export default ContactForm;
