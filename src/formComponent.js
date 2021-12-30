@@ -34,9 +34,14 @@ class ContactForm extends Component {
         })
     };
 
+    //Problem:  To handle errors, I first decided to change the errors object in the state directly by using setState each time for every field. The problem was, the errors object updated fine when I fill in the fields from top to bottom; but when I selected the fields from bottom to top, the error state does not update properly. For example, I first wrote in the third field(message) and the error showed fine, but after that, when I went to the first or second field(name,email) , the errors in those fields didn't show up.
+    //Cause: In the handleErrors Method, When the first "if" changes the state, the second "if" will use the same old state, so the "name" error will remain unchanged. 
+    // Solution: The problem was solved by copying the errors state into a new errors object called newErrors (using spread syntax). then changing the name, email and message properties in the newErrors object. finally, we assign the use setState and assign newErrors object to the errors object in state.
+
     handleErrors= () => {
-        const {fields,touched,errors}=this.state;
+        const {fields,touched}=this.state;
         const emailRegex=/^\w+@\w+\.[a-zA-Z]{2,4}$/;
+        const newErrors={...this.state.errors}
 
         // *** making sure the touched object is changed before changing errors object:
         console.log('touched state after the call to handleErrors method: '+JSON.stringify(this.state.touched));
@@ -44,43 +49,34 @@ class ContactForm extends Component {
 
         if(touched.name) {
             if(fields.name.length<2 || fields.name.length>20) {
-                this.setState({
-                    errors: {...errors, name:'Please enter a valid name'}
-                }, ()=> {
+                newErrors.name='Your name shoud be between 2 and 20 characters'
                     console.log('name field:::errors object immediately after state update:'+JSON.stringify(this.state.errors));
-                })
             } else {
-                this.setState({errors:{...errors, name:''}})
+                newErrors.name=''
             }
         };
 
         if(touched.email) {
-                if(!(fields.email.match(emailRegex)) || fields.email.length>50) {
-                this.setState({
-                    errors: {...errors, email:'Invalid Email'}
-                }, ()=> {
-                    console.log('email field:::errors object immediately after state update:'+JSON.stringify(this.state.errors));
-                })
+            if(!(fields.email.match(emailRegex)) || fields.email.length>50) {
+                newErrors.email='Invalid Email'
+                console.log('email field:::errors object immediately after state update:'+JSON.stringify(this.state.errors));
             }
             else {
-                this.setState({errors:{...errors, email:''}})
+                newErrors.email=''
             }
         };
 
         if(touched.message) {
             if(fields.message.length<6 || fields.message.length>400) {
-                this.setState({
-                    errors: {...errors, message:'Cannot be less than 6 or more than 400 characters'}
-                }, ()=> {
-                    console.log('message field:::errors object immediately after state update:'+JSON.stringify(this.state.errors));
-                })
+                newErrors.message='Cannot be less than 6 or more than 400 characters'
+                console.log('message field:::errors object immediately after state update:'+JSON.stringify(this.state.errors));
             }
             else {
-                this.setState({errors:{...errors, message:''}})
+                newErrors.message=''
             }
         };
-
-        console.log(this.state.errors);
+        this.setState({errors:newErrors})
+        console.dir(this.state.errors);
 
     };
 
