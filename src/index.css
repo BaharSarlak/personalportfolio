@@ -5,11 +5,26 @@
 @layer components {
     .btn-indigo {
         @apply bg-indigo-500 flex-grow py-4 px-6 rounded-lg shadow-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110;
+    },
+    .headings {
+        @apply text-indigo-500 text-4xl font-semibold mb-5;
+    },
+    .errors {
+        @apply text-red-500 mb-2 ml-20
     }
 }
 
-@layer components {
-    .headings {
-        @apply text-indigo-500 text-4xl font-semibold mb-5;
+@layer base {
+    input{
+        @apply text-gray-600 mb-3 border-0 w-3/4 inline-block rounded-xl !important;
+    },
+    textarea {
+        @apply text-gray-600 mb-3 border-0 w-3/4 inline-block rounded-xl resize-y !important;
+    },
+    label {
+        @apply w-1/4 pr-3 py-1 inline-block align-top
+    },
+    button[type=submit] {
+        
     }
 }
