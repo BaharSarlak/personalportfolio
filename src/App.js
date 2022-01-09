@@ -5,6 +5,7 @@ import ContactForm from './formComponent';
 function App() {
   return (
     <div className="bg-gradient-to-b bg-cover from-gray-500 to-gray-800 px-20 text-gray-100">
+      {/* start of header section */}
       <div className='py-8 overflow-auto'>
         <img src={svg} alt="svg" width="30%" className='float-right object-fill pr-20'/>
         <h1 className="w-2/3 text-indigo-500 text-6xl py-5 px-8">Welcome to my page</h1>
@@ -21,7 +22,9 @@ function App() {
           <a href="#about">Contact</a>  
         </button>
       </div>
+      {/* end of header section */}
       <div className='w-3/4 h-2 bg-indigo-600 mx-auto'></div>
+      {/* start of About section */}
       <div className='py-20 w-3/4 mx-auto text-center'>
         <h2 className='headings'>About Me</h2>
         <div>
@@ -59,12 +62,16 @@ function App() {
           </div>
         </div>
       </div>
+      {/* end of About section */}
       <div className='w-3/4 h-2 bg-indigo-600 mx-auto'></div>
+      {/* start of Projects section */}
       <div className='py-20 w-1/2 mx-auto text-center'>
         <h2 className='headings'>My recent work</h2>
         <div></div>
       </div>
+      {/* end of Projects section */}
       <div className='w-3/4 h-2 bg-indigo-600 mx-auto'></div>
+      {/* start of Contact section */}
       <div className='py-20'>
         <h2 className='headings mx-auto text-center'>Contact Me</h2>
         <div className='w-5/6 mx-auto my-10 flex gap-8 justify-around'>
@@ -82,7 +89,7 @@ function App() {
           </div>
         </div>
       </div>
-      
+      {/* end of Contact section */}
     </div>
   );
 }
