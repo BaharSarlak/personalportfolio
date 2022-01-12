@@ -84,7 +84,7 @@ function App() {
                 <img className='p-3 transform hover:scale-110 transition ease-out duration-200 ' src={ruybonWebsite} alt='ruybon website'/>
                 <h4 className='font-bold text-indigo-500 text-lg my-2'>RuyBon Company Website</h4>
                 <p>(still in the process of development)</p>
-                <p className='p-2'>This website has been created for RuyBon Consulting engineers. The client needed a static website to represent company's history and information. This html-based website uses scss and Bootstrap to be responsive in diffferent viewports.</p>
+                <p className='p-2'>This website has been created for RuyBon Consulting engineers. The client needed a website to represent company's history and information. This html-based website uses HTML, JS, SCSS and Bootstrap to be responsive in diffferent viewports.</p>
                 <div className='my-4'>
                   <a href='https://baharsarlak.github.io/RuyBon-website'><button className='btn-indigo py-2 px-4 mx-2'>visit</button></a>
                   <a href='https://github.com/BaharSarlak/RuyBon-website'><button className='btn-indigo py-2 px-4 mx-2'>repository</button></a>
@@ -120,25 +120,30 @@ function App() {
         {/* start of Contact section */}
         <div className='py-20'>
           <h2 id='contact' className='headings mx-auto text-center'>Contact Me</h2>
-          <div className='w-5/6 mx-auto my-10 flex gap-8 justify-around'>
-            <div className='w-1/2'>
+          <div className='w-5/6 mx-auto my-10 flex flex-wrap md:flex gap-6 justify-center md:justify-around'>
+            {/* Later after adding backend, this form component will be uncommented */}
+            {/* <div className='w-1/2'>
               <ContactForm />
+            </div> */}
+            <div className='text-center md:text-left p-2'>
+              <h5 className='font-bold mt-3'>Github:</h5>
+              <a className='ml-2' href='https://github.com/BaharSarlak'>www.github.com/BaharSarlak</a>
+              <h5 className='font-bold mt-3'>linkedin</h5>
+              <a href='https://www.linkedin.com/in/bahar-sarlak/'>www.linkedin.com/in/bahar-sarlak</a>
+              <h5 className='font-bold mt-3'>Email:</h5>
+              <a href='mailto:bsarlak98@gmail.com'>bsarlak98@gmail.com</a>
+              <h5 className='font-bold mt-3'>Location:</h5>
+              <address>Toronto, ON, CA</address>
             </div>
-            <div className='w-1/2'>
-              <iframe className='rounded-md filter saturate-50 brightness-90' title='map' src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d61541.35860624738!2d-79.40311763206869!3d43.76257490824899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1641426613921!5m2!1sen!2sca" width={'100%'} height={'250'} loading="lazy"/>
-              <div className='p-4'>
-                <h5 className='font-bold mt-4'>Location:</h5>
-                <address>North York, Toronto, ON, CA</address>
-                <h5 className='font-bold mt-4'>Email:</h5>
-                <a href='mailto:bsarlak98@gmail.com'>bsarlak98@gmail.com</a>
-              </div>
+            <div className='w-full md:w-1/2'>
+              <iframe className='rounded-md filter saturate-50 brightness-90' title='map' src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d696902.2608639341!2d-79.50434013737556!3d43.70745164464882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1642011705952!5m2!1sen!2sca" width={'100%'} height={'250'} loading="lazy"/>
             </div>
           </div>
         </div>
         {/* end of Contact section */}
       </div>
       {/* start of footer section */}
-      <div className='bg-gray-700 text-gray-300 py-6 text-sm text-center mx-auto sm:flex sm:justify-between'>
+      <div className='bg-gray-700 text-gray-300 py-4 text-sm text-center mx-auto sm:flex sm:justify-between'>
         <div className='px-6 py-2'>
           <p>&copy; 2022 By Bahar Sarlak</p>
         </div>
