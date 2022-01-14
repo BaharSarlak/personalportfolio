@@ -18,7 +18,7 @@ function App() {
         <div className='py-8 lg:flex text-center lg:text-left'>
           <div className='w-full lg:w-2/3'>
             <h1 className="text-gray-200 text-shadow-md text-6xl py-5">Welcome to my page</h1>
-            <h4 className="text-gray-200 text-shadow text-3xl py-9 lg:ml-8 "> My name is Bahar <br/> and I am a web developer!</h4>
+            <h4 className="text-gray-200 text-shadow text-3xl py-9 lg:ml-8 "> My name is Bahar<br/> and I am a web developer!</h4>
           </div>
           <img src={svg} alt="svg" className='object-fill px-9 mx-auto sm:w-2/3 md:w-1/2 lg:w-1/3'/>
         </div>
