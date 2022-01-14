@@ -39,7 +39,7 @@ function App() {
         <div className='py-20 w-full sm:w-3/4 mx-auto text-center'>
           <div>
             <h2 id='about' className='headings'>About Me</h2>
-            <p className='text-justify'>My name is Bahar Sarlak. After 5 years of working as a civil engineer, I decided to change my career path. I started watching online tutorials and learning free material. As I continued learning, I became more and more interested in web development. The field appealed to me as it evolves constantly and needs continuous learning, problem-solving, and critical thinking. Therefore, I took a full stack web development course in a bootcamp. I have worked on websites and applications in both front-end and back-end. </p>
+            <p className='text-justify'>My name is Bahar Sarlak. After 5 years of working as a civil engineer, I decided to change my career path. I started watching online tutorials and learning free material. As I continued learning, I became more and more interested in web development. The field appealed to me as it evolves constantly and needs continuous learning, problem-solving, and critical thinking. Therefore, I took a full stack web development course in a bootcamp. I have worked on websites and applications in both front-end and back-end.</p>
           </div>
           <div className='sm:flex sm:gap-8 mt-8 justify-around'>
             <div className='sm:w-1/3 bg-gray-700 border-0 rounded-md p-3 my-2'>
