@@ -18,7 +18,7 @@ function App() {
         <div className='py-8 lg:flex text-center lg:text-left'>
           <div className='w-full lg:w-2/3'>
             <h1 className="text-gray-200 text-shadow-md text-6xl py-5">Welcome to my page</h1>
-            <h4 className="text-gray-200 text-shadow text-3xl py-9 lg:ml-8 "> My name is Bahar<br/> and I am a web developer!</h4>
+            <h4 className="text-gray-200 text-shadow text-3xl py-9 lg:ml-8 ">My name is Bahar<br/> and I am a web developer!</h4>
           </div>
           <img src={svg} alt="svg" className='object-fill px-9 mx-auto sm:w-2/3 md:w-1/2 lg:w-1/3'/>
         </div>
@@ -145,10 +145,10 @@ function App() {
       {/* start of footer section */}
       <div className='bg-gray-700 text-gray-300 py-4 text-sm text-center mx-auto sm:flex sm:justify-between'>
         <div className='px-6 py-2'>
-          <p>&copy; 2022 By Bahar Sarlak</p>
+          <p>&copy; 2022 by Bahar Sarlak</p>
         </div>
         <div className='px-6 py-2'>
-          <a href='https://www.vecteezy.com/free-vector/program'>vectors from vetteezy.com</a>
+          <a href='https://www.vecteezy.com/free-vector/program'>vectors from vetteezy.com </a>
         </div>
         <div className='px-6 py-2 flex justify-center'>
           <a href="https://github.com/BaharSarlak" rel='noreferrer' target="_blank">
