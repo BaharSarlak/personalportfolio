@@ -44,7 +44,7 @@ function App() {
           <div className='sm:flex sm:gap-8 mt-8 justify-around'>
             <div className='sm:w-1/3 bg-gray-700 border-0 rounded-md p-3 my-2'>
               <h4 className='text-lg text-elephant font-bold border-b-4 rounded-sm border-elephant py-3'>Front-end</h4>
-              <ul className='list-disc my-4'>
+              <ul className='list-none my-4'>
                 <li>HTML</li>
                 <li>CSS &amp; Sass</li>
                 <li>Javascript</li>
@@ -56,7 +56,7 @@ function App() {
             </div>
             <div className='sm:w-1/3 bg-gray-700 border-0  rounded-md p-3 my-2'>
               <h4 className='text-lg text-elephant font-bold border-b-4 rounded-sm border-elephant py-3'>Back-end</h4>
-              <ul className='list-disc my-4'>
+              <ul className='list-none my-4'>
                 <li>Nodejs</li>
                 <li>Express</li>
                 <li>MongoDB</li>
@@ -64,7 +64,7 @@ function App() {
             </div>
             <div className='sm:w-1/3 bg-gray-700 border-0  rounded-md p-3 my-2'>
               <h4 className='text-lg text-elephant font-bold border-b-4 rounded-sm border-elephant py-3'>Tools</h4>
-              <ul className='list-disc my-4'>
+              <ul className='list-none my-4'>
                 <li>Git &amp; Github</li>
                 <li>NPM &amp; Yarn</li>
                 <li>MongoDB</li>
