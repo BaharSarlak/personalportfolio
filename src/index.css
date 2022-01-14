@@ -4,10 +4,10 @@
 
 @layer components {
     .btn-indigo {
-        @apply bg-indigo-500 flex-grow py-4 px-6 rounded-lg shadow-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110;
+        @apply bg-dark-blue lg:text-xl flex-grow py-4 px-6 rounded-lg shadow-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110;
     },
     .headings {
-        @apply text-indigo-500 text-4xl font-semibold mb-5;
+        @apply text-light-gray text-shadow text-4xl font-semibold mb-5;
     },
     .errors {
         @apply text-red-500 mb-2 ml-20
@@ -27,4 +27,22 @@
     button[type=submit] {
         
     }
+}
+
+@layer utilities {
+    @variants responsive {
+        .text-shadow {
+          text-shadow: 1px 1px 8px #383838;
+        }
+        .text-shadow-md {
+          text-shadow: 4px 4px 12px #383838;
+        }
+        .text-shadow-lg {
+          text-shadow: 15px 15px 30px #383838;
+        }
+        .text-shadow-none {
+          text-shadow: none;
+        }
+        
+    } 
 }

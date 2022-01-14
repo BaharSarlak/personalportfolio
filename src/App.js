@@ -13,16 +13,16 @@ function App() {
   return (
     <React.Fragment>
       <div className="bg-gradient-to-b bg-cover from-gray-500 to-gray-900
-       px-8 lg:px-20 text-gray-100">
+       px-8 lg:px-20 text-gray-200">
         {/* start of header section */}
         <div className='py-8 lg:flex text-center lg:text-left'>
           <div className='w-full lg:w-2/3'>
-            <h1 className="text-indigo-500 text-6xl py-5">Welcome to my page</h1>
-            <h4 className="text-gray-100 text-3xl py-9 lg:ml-8 "> My name is Bahar <br/> and I am a web developer!</h4>
+            <h1 className="text-gray-200 text-shadow-md text-6xl py-5">Welcome to my page</h1>
+            <h4 className="text-gray-200 text-shadow text-3xl py-9 lg:ml-8 "> My name is Bahar <br/> and I am a web developer!</h4>
           </div>
-          <img src={svg} alt="svg" className='object-fill px-9 mx-auto sm:w-2/3 lg:w-1/3'/>
+          <img src={svg} alt="svg" className='object-fill px-9 mx-auto sm:w-2/3 md:w-1/2 lg:w-1/3'/>
         </div>
-        <div className='py-20 md:w-2/3 mx-auto justify-center flex flex-row gap-4 '>
+        <div className='py-20 w-full lg:w-3/4 mx-auto justify-center flex gap-4 md:gap-20'>
           <a href="#about"><button type="button" className='btn-indigo'>
             About Me
           </button></a>
@@ -34,7 +34,7 @@ function App() {
           </button></a>
         </div>
         {/* end of header section */}
-        <div className='w-3/4 h-2 bg-indigo-600 mx-auto'></div>
+        <div className='w-3/4 h-2 bg-gray-500 mx-auto'></div>
         {/* start of About section */}
         <div className='py-20 w-full sm:w-3/4 mx-auto text-center'>
           <div>
@@ -43,7 +43,7 @@ function App() {
           </div>
           <div className='sm:flex sm:gap-8 mt-8 justify-around'>
             <div className='sm:w-1/3 bg-gray-700 border-0 rounded-md p-3 my-2'>
-              <h4 className='text-lg text-indigo-500 font-bold border-b-4 rounded-sm border-indigo-500 py-3'>Front-end</h4>
+              <h4 className='text-lg text-elephant font-bold border-b-4 rounded-sm border-elephant py-3'>Front-end</h4>
               <ul className='list-disc my-4'>
                 <li>HTML</li>
                 <li>CSS &amp; Sass</li>
@@ -55,7 +55,7 @@ function App() {
               </ul>
             </div>
             <div className='sm:w-1/3 bg-gray-700 border-0  rounded-md p-3 my-2'>
-              <h4 className='text-lg text-indigo-500 font-bold border-b-4 rounded-sm border-indigo-500 py-3'>Back-end</h4>
+              <h4 className='text-lg text-elephant font-bold border-b-4 rounded-sm border-elephant py-3'>Back-end</h4>
               <ul className='list-disc my-4'>
                 <li>Nodejs</li>
                 <li>Express</li>
@@ -63,7 +63,7 @@ function App() {
               </ul>
             </div>
             <div className='sm:w-1/3 bg-gray-700 border-0  rounded-md p-3 my-2'>
-              <h4 className='text-lg text-indigo-500 font-bold border-b-4 rounded-sm border-indigo-500 py-3'>Tools</h4>
+              <h4 className='text-lg text-elephant font-bold border-b-4 rounded-sm border-elephant py-3'>Tools</h4>
               <ul className='list-disc my-4'>
                 <li>Git &amp; Github</li>
                 <li>NPM &amp; Yarn</li>
@@ -74,7 +74,7 @@ function App() {
           </div>
         </div>
         {/* end of About section */}
-        <div className='w-3/4 h-2 bg-indigo-600 mx-auto'></div>
+        <div className='w-3/4 h-2 bg-gray-500 mx-auto'></div>
         {/* start of Projects section */}
         <div className='py-20 container mx-auto text-center'>
           <h2 id='projects' className='headings'>My recent work</h2>
@@ -82,41 +82,41 @@ function App() {
             <div className='md:w-1/2 lg:w-1/3 p-3'>
               <div className='grid grid-cols-1 my-4 p-4 bg-gray-600 rounded-md'>
                 <img className='p-3 transform hover:scale-110 transition ease-out duration-200 ' src={ruybonWebsite} alt='ruybon website'/>
-                <h4 className='font-bold text-indigo-500 text-lg my-2'>RuyBon Company Website</h4>
+                <h4 className='font-bold text-light-gray text-shadow text-lg my-2'>RuyBon Company Website</h4>
                 <p>(still in the process of development)</p>
                 <p className='p-2'>This website has been created for RuyBon Consulting engineers. The client needed a website to represent company's history and information. This html-based website uses HTML, JS, SCSS and Bootstrap to be responsive in diffferent viewports.</p>
                 <div className='my-4'>
-                  <a href='https://baharsarlak.github.io/RuyBon-website'><button className='btn-indigo py-2 px-4 mx-2'>visit</button></a>
-                  <a href='https://github.com/BaharSarlak/RuyBon-website'><button className='btn-indigo py-2 px-4 mx-2'>repository</button></a>
+                  <a rel='noreferrer' target="_blank" href='https://baharsarlak.github.io/RuyBon-website'><button className='btn-indigo py-2 px-4 mx-2'>visit</button></a>
+                  <a rel='noreferrer' target="_blank" href='https://github.com/BaharSarlak/RuyBon-website'><button className='btn-indigo py-2 px-4 mx-2'>repository</button></a>
                 </div>
               </div>
             </div>
             <div className='md:w-1/2 lg:w-1/3 p-3'>
               <div className=' grid grid-col-1 my-4 p-4 bg-gray-600 rounded-md'>
                 <img className='p-3 transform hover:scale-110 transition ease-out duration-200 ' src={ruybonReact} alt='ruybon react'/>
-                <h4 className='font-bold text-indigo-500 text-lg my-2'>RuyBon React App</h4>
+                <h4 className='font-bold text-light-gray text-shadow text-lg my-2'>RuyBon React App</h4>
                 <p className='p-2'>A React-based web application which is an alternative to Ruybon's website. This app implements yarn and libraries like reactstrap, react-bootstrap, react router, classNames and google-map-react API. </p>
                 <div className='my-4 self-end'>
-                  <a href='https://github.com/BaharSarlak/RuyBon-React'><button className='btn-indigo py-2 px-4 mx-2'>visit</button></a>
-                  <a href='https://github.com/BaharSarlak/RuyBon-React'><button className='btn-indigo py-2 px-4 mx-2'>repository</button></a>
+                  <a rel='noreferrer' target="_blank" href='https://github.com/BaharSarlak/RuyBon-React'><button disabled className='btn-indigo py-2 px-4 mx-2'>visit</button></a>
+                  <a rel='noreferrer' target="_blank" href='https://github.com/BaharSarlak/RuyBon-React'><button className='btn-indigo py-2 px-4 mx-2'>repository</button></a>
                 </div>
               </div>
             </div>
             <div className='md:w-1/2 lg:w-1/3 p-3'>
               <div className='grid grid-col-1 my-4 p-4 bg-gray-600 rounded-md'>
                 <img className='p-3 transform hover:scale-110 transition ease-out duration-200 ' src={nucampReactNative} alt='ruybon react'/>
-                <h4 className='font-bold text-indigo-500 text-lg my-2'>Nucamp React Native mobile App<br/>(Bootcamp Project)</h4>
+                <h4 className='font-bold text-light-gray text-shadow text-lg my-2'>Nucamp React Native mobile App<br/>(Bootcamp Project)</h4>
                 <p className='p-2'>A React Native mobile application which represents nucamp bootcamp imaginary app. various react native libraris are used in this app, along with redux and expo framework.</p>
                 <div className='my-4 self-end'>
-                  <a href='https://github.com/BaharSarlak/RuyBon-React'><button className='btn-indigo py-2 px-4 mx-2'>visit</button></a>
-                  <a href='https://github.com/BaharSarlak/nucampsite-app'><button className='btn-indigo py-2 px-4 mx-2'>repository</button></a>
+                  <a rel='noreferrer' target="_blank" href='https://github.com/BaharSarlak/RuyBon-React'><button disabled className='btn-indigo py-2 px-4 mx-2'>visit</button></a>
+                  <a rel='noreferrer' target="_blank" href='https://github.com/BaharSarlak/nucampsite-app'><button className='btn-indigo py-2 px-4 mx-2'>repository</button></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
         {/* end of Projects section */}
-        <div className='w-3/4 h-2 bg-indigo-600 mx-auto'></div>
+        <div className='w-3/4 h-2 bg-gray-500 mx-auto'></div>
         {/* start of Contact section */}
         <div className='py-20'>
           <h2 id='contact' className='headings mx-auto text-center'>Contact Me</h2>
