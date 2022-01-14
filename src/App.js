@@ -1,5 +1,7 @@
 
 import svg from './images/female-developer-illustration/female developer 1---.svg';
+import wordResume from './docs/Bahar-Sarlak-resume.doc'
+import pdfResume from './docs/Bahar-Sarlak-resume.pdf'
 import ruybonWebsite from './images/ruybon home img-cropped.png';
 import ruybonReact from './images/ruybon react cropped.png';
 import nucampReactNative from './images/nucamp react native app-canvas.png';
@@ -49,7 +51,10 @@ function App() {
                 <li>CSS &amp; Sass</li>
                 <li>Javascript</li>
                 <li>React</li>
+                <li>Redux</li>
                 <li>React Native</li>
+                <li>Expo</li>
+                <li>Android Studio</li>
                 <li>Bootstrap</li>
                 <li>Tailwind CSS</li>
               </ul>
@@ -60,6 +65,7 @@ function App() {
                 <li>Nodejs</li>
                 <li>Express</li>
                 <li>MongoDB</li>
+                <li>Mongoose</li>
               </ul>
             </div>
             <div className='sm:w-1/3 bg-gray-700 border-0  rounded-md p-3 my-2'>
@@ -67,9 +73,16 @@ function App() {
               <ul className='list-none my-4'>
                 <li>Git &amp; Github</li>
                 <li>NPM &amp; Yarn</li>
-                <li>MongoDB</li>
+                <li>VS code</li>
                 <li>Postman</li>
               </ul>
+            </div>
+          </div>
+          <div className='mt-20 sm:flex gap-10 justify-center'>
+            <h5 className='my-5 sm:my-0 text-gray-300 text-xl font-bold '>Need my resume?</h5>
+            <div className='flex justify-center gap-3'>
+              <a href={wordResume} download={'Bahar Sarlak--resume.doc'}><button className='bg-dark-blue px-4 py-2 rounded-md'>Download Word</button></a>
+              <a href={pdfResume} download={'Bahar Sarlak--resume.pdf'}><button className='bg-dark-blue px-4 py-2 rounded-md'>Download pdf</button></a>
             </div>
           </div>
         </div>
