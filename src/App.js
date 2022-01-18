@@ -82,7 +82,7 @@ function App() {
             <h5 className='my-5 sm:my-0 text-gray-300 text-xl font-bold '>Need my resume?</h5>
             <div className='flex justify-center gap-3'>
               <a href={wordResume} download={'Bahar Sarlak--resume.doc'}><button className='bg-dark-blue px-4 py-2 rounded-md'>Download Word</button></a>
-              <a href={pdfResume} download={'Bahar Sarlak--resume.pdf'}><button className='bg-dark-blue px-4 py-2 rounded-md'>Download pdf</button></a>
+              <a href={pdfResume} download={'Bahar Sarlak--resume.pdf'}><button className='bg-dark-blue px-4 py-2 rounded-md'>Download PDF</button></a>
             </div>
           </div>
         </div>
